@@ -1,0 +1,57 @@
+<html>
+<head>
+  <title>Physio Web App</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="login_div" class="main-div">
+    <h3>Please enter your account details</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h3 id=user_para></h3>
+    <p>Here are your current patients</p>
+    <table style="width:100%">
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>Dalton</td>
+        <td>Butler</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Oldman</td>
+        <td>Jackson</td>
+        <td>94</td>
+      </tr>
+    </table>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+
+  <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAmvj-KtrRtblPEGZBmh-7EyiXTAk4cjmM",
+      authDomain: "condevproject.firebaseapp.com",
+      databaseURL: "https://condevproject.firebaseio.com",
+      projectId: "condevproject",
+      storageBucket: "condevproject.appspot.com",
+      messagingSenderId: "493680489997"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="index.js"></script>
+
+</body>
+</html>
